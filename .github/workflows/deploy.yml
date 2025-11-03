@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "."
+          source: "clientes-1.jar,dockerfile"
           target: "~/SpringTest/docker-cliente"
  
       - name: Deploy on VPS
