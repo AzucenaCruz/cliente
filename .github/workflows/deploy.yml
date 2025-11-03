@@ -34,4 +34,11 @@ jobs:
             docker network create spring-net || true
             docker stop cliente-app || true
             docker rm cliente-app || true
-            docker run -d --name cliente-app --network spring-net --memory="1024m" --cpus="1" -p 8090:8090 cliente-app
+            docker run -d --name cliente-app \
+              --network spring-net \
+              --memory="1024m" \
+              --cpus="1" \
+              -e SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/manager \
+              -e SPRING_DATASOURCE_USERNAME=root \
+              -e SPRING_DATASOURCE_PASSWORD=cruz123 \
+              -p 8090:8090 cliente-app
