@@ -33,4 +33,4 @@ jobs:
             docker build -t cliente-app .
             docker stop cliente-app || true
             docker rm cliente-app|| true
-            docker run -d --name cliente-app -p 8090:8090 cliente-app
+            docker run -d --name cliente-app --memory"1024m" --cpus="1" -p 8090:8090 cliente-app
