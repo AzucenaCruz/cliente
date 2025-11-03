@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "."
-          target: "~/ServiceClientes/docker-cliente"
+          target: "~/SpringTest/docker-cliente"
  
       - name: Deploy on VPS
         uses: appleboy/ssh-action@v1.2.0
@@ -29,8 +29,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ~//ServiceClientes/docker-cliente
-            docker build -t mi-cliente .
-            docker stop mi-cliente || true
-            docker rm mi-cliente|| true
-            docker run -d --name mi-cliente -p 8092:8092 mi-cliente
+            cd ~/SpringTest/docker-cliente
+            docker build -t cliente-app .
+            docker stop cliente-app || true
+            docker rm cliente-app|| true
+            docker run -d --name cliente-app -p 8090:8090 cliente-app
