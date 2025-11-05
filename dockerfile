@@ -2,7 +2,7 @@
 FROM openjdk:21-jdk-slim
 
 # Directorio de trabajo dentro del contenedor
-WORKDIR /root/ServiceClientes/docker-cliente
+WORKDIR /root/SpringTest/docker-cliente
 
 # Copiar el jar al contenedor
 COPY clientes-1.jar cliente.jar
