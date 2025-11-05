@@ -13,7 +13,7 @@ ENV MYSQL_PASSWORD=cruz123
 ENV MYSQL_HOST=62.171.169.111
 
 # Puerto de tu aplicación (ajústalo si es diferente)
-EXPOSE 8090
+EXPOSE 8081
 
 # Ejecutar el jar
 ENTRYPOINT ["java", "-jar", "cliente.jar"]
