@@ -41,4 +41,4 @@ jobs:
               -e SPRING_DATASOURCE_URL=jdbc:mysql2://mysql2:3306/clientes \
               -e SPRING_DATASOURCE_USERNAME=root \
               -e SPRING_DATASOURCE_PASSWORD=cruz123 \
-              -p 8090:8090 cliente-app
+              -p 8081:8081 cliente-app
